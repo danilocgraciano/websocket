@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>.:: WS - Comunicador ::.</title>
+</head>
+
+<body>
+    <div class="container-fluid mt-4">
+
+        <form id="form">
+            <div class="form-group">
+                <label for="txaMensagem">Mensagem:</label>
+                <textarea class="form-control" rows="5" id="txaMensagem" required></textarea>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="txtOrigem">Origem</label>
+                        <input type="text" class="form-control" id="txtOrigem" required>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="txtDestino">Destino</label>
+                        <input type="text" class="form-control" id="txtDestino" required>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="btnEnviar">Enviar</button>
+
+        </form>
+
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/socket.io-client/dist/socket.io.js"></script>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
