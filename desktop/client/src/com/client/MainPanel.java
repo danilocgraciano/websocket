@@ -109,6 +109,28 @@ public class MainPanel extends JPanel {
 
 			@Override
 			public void call(Object... args) {
+				JOptionPane.showMessageDialog(parent, "Desconectado.");
+			}
+
+		}).on(Socket.EVENT_RECONNECT, new Emitter.Listener() {
+
+			@Override
+			public void call(Object... args) {
+				JOptionPane.showMessageDialog(parent, "Reconectado.");
+			}
+
+		}).on(Socket.EVENT_CONNECT_ERROR, new Emitter.Listener() {
+
+			@Override
+			public void call(Object... args) {
+				JOptionPane.showMessageDialog(parent, "Erro na conexão");
+			}
+
+		}).on(Socket.EVENT_CONNECT_TIMEOUT, new Emitter.Listener() {
+
+			@Override
+			public void call(Object... args) {
+				JOptionPane.showMessageDialog(parent, "Timeout na conexão");
 			}
 
 		});
