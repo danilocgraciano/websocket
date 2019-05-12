@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     $('#txaMensagem').val('WEB - Hello World!');
 
-    var socket = io.connect('http://localhost:3000');
+    var socket = io.connect('http://localhost:3000?token=WEB');
     socket.on('connect', () => {
         $('#txtOrigem').val(socket.id);
     });

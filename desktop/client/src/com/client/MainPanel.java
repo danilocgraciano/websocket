@@ -83,7 +83,7 @@ public class MainPanel extends JPanel {
 
 	private void initialize() throws URISyntaxException {
 
-		socket = IO.socket("http://localhost:3000");
+		socket = IO.socket("http://localhost:3000?token=DESKTOP");
 		socket.on(Socket.EVENT_CONNECT, new Emitter.Listener() {
 
 			@Override
