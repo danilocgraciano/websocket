@@ -25,6 +25,9 @@ io.on('connection', (client) => {
     
     client.on('send', function (obj) {
         var data = JSON.parse(obj);
+
+        // https://socket.io/docs/emit-cheatsheet/
+        
         io.to(data.destino).emit('message', obj);
     });
 });
